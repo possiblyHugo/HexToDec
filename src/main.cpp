@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-#include <unordered_map>
+
 #include "HexToDec.h"
 
 int main() {
-	std::string hex{ "5C6" };
+	std::string hex{ "B045" };
 	HexToDec newConvert(hex);
 	int decValue = newConvert.Convert();
 

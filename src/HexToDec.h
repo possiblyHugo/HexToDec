@@ -30,7 +30,7 @@ HexToDec::HexToDec(std::string hexStringInput) {
 int HexToDec::Convert() {
 	int result{ 0 };
 	int decValue{ 0 };
-	int stringLength{ hexString.length() - 1};
+	size_t stringLength{ hexString.length() - 1};
 
 	for (int i = 0, j = stringLength; i <= stringLength; i++, j--) { // i = position left to right, j = position right to left
 		decValue = HexDigitToDec(hexString[i]);
