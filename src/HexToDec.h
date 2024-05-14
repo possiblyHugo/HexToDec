@@ -30,16 +30,17 @@ HexToDec::HexToDec(std::string hexStringInput) {
 int HexToDec::Convert() {
 	int result{ 0 };
 	int decValue{ 0 };
+	int stringLength{ hexString.length() - 1};
 
-	for (int i = hexString.length() - 1; i >= 0; i--) {
+	for (int i = 0, j = stringLength; i <= stringLength; i++, j--) { // i = position left to right, j = position right to left
 		decValue = HexDigitToDec(hexString[i]);
 		
 		if (decValue == -1) {
 			std::cout << "There was an error converting HexDigit to Dec\n";
 			exit(-1);
 		}
-		
-		result += decValue + std::pow(16, i);
+
+		result += (decValue * std::pow(16, j));
 	}
 	return result;
 }

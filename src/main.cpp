@@ -1,15 +1,14 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include "HexToDec.h"
 
 int main() {
-
 	std::string hex{ "5C6" };
-	int result{ 0 };
+	HexToDec newConvert(hex);
+	int decValue = newConvert.Convert();
 
-	for (int i = hex.length() - 1; i >= 0; i--) {
-		//
-	}
+	std::cout << decValue << std::endl;
 
 	return 0;
 }
