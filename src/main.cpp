@@ -5,9 +5,10 @@
 int main() {
 
 	std::string hex{ "5C6" };
+	int result{ 0 };
 
 	for (int i = hex.length() - 1; i >= 0; i--) {
-		std::cout << hex[i] << "\n";
+		//
 	}
 
 	return 0;
