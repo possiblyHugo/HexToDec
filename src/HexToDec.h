@@ -11,6 +11,7 @@ public:
 
 private:
 	std::string hexString;
+	int HexDigitToDec(char digit);
 	const std::unordered_map<char, int> HexList{
 	{ 'A', 10 },
 	{ 'B', 11 },
@@ -19,8 +20,6 @@ private:
 	{ 'E', 14 },
 	{ 'F', 15 }
 	};
-
-	int HexDigitToDec(char digit);
 };
 
 HexToDec::HexToDec(std::string hexStringInput) {
